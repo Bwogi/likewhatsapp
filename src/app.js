@@ -1,5 +1,9 @@
+import dotenv from "dotenv";
 import express from "express";
 const app = express();
+
+// dotenv config
+dotenv.config();
 
 // routes
 app.get("/", (req, res) =>
