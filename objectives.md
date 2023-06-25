@@ -1,8 +1,28 @@
+# Custom logger, handle Server and http errors
+
+Adding a custom logger, Handling uncaughtException, unhandledRejection errors, SIGTERM, and handle http errors.
+
+## Objectives
+
+- Adding a custom logger to use instead of using the boring console.log to help us read the console better and seperate errors from infos.
+
+- Handle Server closing when facing uncaughtException, unhandledRejection errors.
+
+- Close server gracefully on SIGTERM signal.
+
+- Handle http errors and get proper error messages from server.
+
+## Packages we will use
+
+**Winston:** <br/>[![Winston](https://img.shields.io/npm/v/winston.svg?logo=winston)](https://www.npmjs.com/package/winston)
+
+---
+
 # Let's add few middlwares
 
 Let's setup cross-env and add some middlwares (Functionality, Security and Speed).
 
-## Objectifs
+## Objectives
 
 - Run scripts that set and use environment variables across platforms with cross-env.
 
