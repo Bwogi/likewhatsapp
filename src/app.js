@@ -7,6 +7,7 @@ import cookieParser from "cookie-parser";
 import compression from "compression";
 import fileUpload from "express-fileupload";
 import cors from "cors";
+import createHttpErrors from "http-errors";
 
 const app = express();
 
@@ -49,6 +50,9 @@ app.use(
   // })
   cors()
 );
+
+// http error handling
+app.use(async (err, req, res, next) => {});
 
 // routes
 app.get("/", (req, res) => {
