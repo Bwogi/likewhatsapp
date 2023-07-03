@@ -51,16 +51,31 @@ app.use(
   cors()
 );
 
-// http error handling
-app.use(async (err, req, res, next) => {});
-
 // routes
 app.get("/", (req, res) => {
   res.send("Welcome to the Server!");
 });
 
-app.post("/test1", (req, res) => {
-  res.send(req.body);
+app.post("/test", (req, res) => {
+  // res.status(409).json({ message: "There is a conflict." });
+  throw createHttpErrors.BadRequest("This route has an error!");
+});
+
+// http error handling
+// a route that does not exist - http://localhost:8000/test32323
+app.use(async (req, res, next) => {
+  next(createHttpErrors.NotFound("This route does not exist"));
+});
+
+// a route that exists but has an error - http://localhost:8000/test
+app.use(async (err, req, res, next) => {
+  res.status(err.status || 500);
+  res.send({
+    error: {
+      status: err.status || 500,
+      message: err.message,
+    },
+  });
 });
 
 export default app;
