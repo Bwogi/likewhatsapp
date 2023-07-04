@@ -8,6 +8,7 @@ import compression from "compression";
 import fileUpload from "express-fileupload";
 import cors from "cors";
 import createHttpErrors from "http-errors";
+import routes from "./routes/index.js";
 
 const app = express();
 
@@ -52,14 +53,18 @@ app.use(
 );
 
 // routes
-app.get("/", (req, res) => {
-  res.send("Welcome to the Server!");
-});
+// app.get("/", (req, res) => {
+//   res.send("Welcome to the Server!");
+// });
 
-app.post("/test", (req, res) => {
-  // res.status(409).json({ message: "There is a conflict." });
-  throw createHttpErrors.BadRequest("This route has an error!");
-});
+// app.post("/test", (req, res) => {
+//   // res.status(409).json({ message: "There is a conflict." });
+//   throw createHttpErrors.BadRequest("This route has an error!");
+// });
+
+// app.use(routes); // add a prefix and a version number
+// api v1 routes
+app.use("/api/v1", routes); // add a prefix and a version number // http://localhost:8000/api/v1/auth/register
 
 // http error handling
 // a route that does not exist - http://localhost:8000/test32323
