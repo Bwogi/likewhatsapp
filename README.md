@@ -1,6 +1,46 @@
 # App Development Process
 
-# Custom logger, handle Server and http errors
+---
+
+# 5. Integrate Mongodb to our application
+
+Let's add mongodb as our main database.
+
+## Objectives
+
+- Create a mongodb cluster.
+
+- Connect to the database from our express app.
+
+- Handle mongodb connection errors.
+
+- Activate debugging mode.
+
+## Packages we will use
+
+## **Mongoose:** <br/>[![Mongoose](https://img.shields.io/npm/v/mongoose.svg?logo=mongoose)](https://www.npmjs.com/package/mongoose)
+
+---
+
+# 4. Setup routes and controllers
+
+Adding routes setup and controllers functions.
+
+## Objectives
+
+- Add routes setup and files.
+
+- Trim incoming requests.
+
+- Add controllers functions.
+
+## Packages we will use
+
+**Trim-request:** <br/>[![Cors](https://img.shields.io/npm/v/trim-request.svg?logo=trim-request)](https://www.npmjs.com/package/trim-request)
+
+---
+
+# 3. Custom logger, handle Server and http errors
 
 Adding a custom logger, Handling uncaughtException, unhandledRejection errors, SIGTERM, and handle http errors.
 
@@ -20,7 +60,7 @@ Adding a custom logger, Handling uncaughtException, unhandledRejection errors, S
 
 ---
 
-# Let's add few middlwares
+# 2. Let's add few middlwares
 
 Let's setup cross-env and add some middlwares (Functionality, Security and Speed).
 
@@ -63,3 +103,23 @@ Let's setup cross-env and add some middlwares (Functionality, Security and Speed
 **Cors:** <br/>[![Cors](https://img.shields.io/npm/v/cors.svg?logo=cors)](https://www.npmjs.com/package/cors)
 
 - [@bwogi](https://www.github.com/bwogi)
+
+---
+
+# 1. Let's setup our express application
+
+Let's build a basic express application to start with.
+
+## Goals
+
+- Create a basic express application.
+
+- Adding Nodemon to automatically restart the server when file changes in the directory are detected.
+
+- Push our source code to github.
+
+## Packages we will use
+
+**Express:** <br/>[![Nodemon](https://img.shields.io/npm/v/express.svg?logo=express)](https://www.npmjs.com/package/express)
+<br/>
+**Nodemon:** <br/>[![Nodemon](https://img.shields.io/npm/v/nodemon.svg?logo=nodemon)](https://www.npmjs.com/package/nodemon)

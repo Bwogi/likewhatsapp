@@ -1,8 +1,20 @@
 import app from "./app.js";
 import logger from "./configs/logger.config.js";
+import mongoose from "mongoose";
 
 // environment variables
 const port = process.env.PORT || 7000;
+const { DATABASE_URL } = process.env;
+
+// mongodb connection
+mongoose
+  .connect(DATABASE_URL, {
+    useNewURLParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    logger.info("Connected to MongoDB.");
+  });
 
 let server = app.listen(port, () => {
   // console.log(`Server is running http://localhost:${port}`);
