@@ -5,6 +5,7 @@ import {
   refreshToken,
   register,
 } from "../controllers/auth.controller.js";
+import trimRequest from "trim-request";
 
 const router = express.Router();
 
@@ -13,18 +14,18 @@ const router = express.Router();
 /* router.route("/register").post((req, res) => {
    res.send("hello from register api");
  }); */
-router.route("/register").post(register);
+router.route("/register").post(trimRequest.all, register);
 
 // Login
 /* router.route("/login").post((req, res) => {
   res.send("hello from login api");
 }); */
-router.route("/login").post(login);
+router.route("/login").post(trimRequest.all, login);
 
 // Logout
-router.route("/logout").post(logout);
+router.route("/logout").post(trimRequest.all, logout);
 
 // Refresh token
-router.route("/refreshToken").post(refreshToken);
+router.route("/refreshToken").post(trimRequest.all, refreshToken);
 
 export default router;
