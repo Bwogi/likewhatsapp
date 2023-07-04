@@ -6,6 +6,18 @@ import mongoose from "mongoose";
 const port = process.env.PORT || 7000;
 const { DATABASE_URL } = process.env;
 
+// in case of any mongodb errors
+mongoose.connection.on("error", (error) => {
+  logger.error(`Mongodb connection error: ${error}`);
+  // close the connection
+  process.exit(1);
+});
+
+// mongodb debug mode enabled - development mode only
+if (process.env.NODE_ENV !== "production") {
+  mongoose.set("debug", true);
+}
+
 // mongodb connection
 mongoose
   .connect(DATABASE_URL, {
@@ -17,9 +29,9 @@ mongoose
   });
 
 let server = app.listen(port, () => {
+  logger.info(`process id: ${process.pid}`);
   // console.log(`Server is running http://localhost:${port}`);
   logger.info(`Server is running on http://localhost:${port}`);
-  console.log("process id: ", process.pid);
   // throw new Error(`Andrew, there is a Server Error`);
 });
 
