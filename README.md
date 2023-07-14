@@ -2,6 +2,44 @@
 
 ---
 
+# 6. Register a user
+
+Let's work on the register function of the user
+
+## Objectives
+
+- Validate the user data.
+- Create a service to add a user to the database.
+- Generate access and refresh access tokens.
+- Store the refresh token in the cookies.
+- Send back the user data to the front-end
+
+## Packages we will use
+
+## **Validator:** <br/>[![validator](https://img.shields.io/npm/v/validator.svg?logo=validator)](https://www.npmjs.com/package/validator)
+
+## **Bcrypt:** <br/>[![Bcrypt](https://img.shields.io/npm/v/bcrypt.svg?logo=bcrypt)](https://www.npmjs.com/package/bcrypt)
+
+---
+
+# 6. User Model
+
+Let's create a user model
+
+## Objectives
+
+- Create a user model.
+
+- Learn proper validation for a mongoose schema.
+
+- Use validator in the model schema.
+
+## Packages we will use
+
+## **Validator:** <br/>[![validator](https://img.shields.io/npm/v/validator.svg?logo=validator)](https://www.npmjs.com/package/validator)
+
+---
+
 # 5. Integrate Mongodb to our application
 
 Let's add mongodb as our main database.
@@ -36,7 +74,7 @@ Adding routes setup and controllers functions.
 
 ## Packages we will use
 
-**Trim-request:** <br/>[![Cors](https://img.shields.io/npm/v/trim-request.svg?logo=trim-request)](https://www.npmjs.com/package/trim-request)
+**Trim-request:** <br/>[![trim-request](https://img.shields.io/npm/v/trim-request.svg?logo=trim-request)](https://www.npmjs.com/package/trim-request)
 
 ---
 
@@ -87,19 +125,12 @@ Let's setup cross-env and add some middlwares (Functionality, Security and Speed
 ## Packages we will use
 
 **Cross-env:** <br/>[![Cross-env](https://img.shields.io/npm/v/cross-env.svg?logo=cross-env)](https://www.npmjs.com/package/cross-env)
-<br/>
-**Moragn:** <br/>[![Morgan](https://img.shields.io/npm/v/morgan.svg?logo=morgan)](https://www.npmjs.com/package/morgan)
-<br/>
+**Morgan:** <br/>[![Morgan](https://img.shields.io/npm/v/morgan.svg?logo=morgan)](https://www.npmjs.com/package/morgan)
 **Helmet:** <br/>[![Helmet](https://img.shields.io/npm/v/helmet.svg?logo=helmet)](https://www.npmjs.com/package/helmet)
-<br/>
 **Express mongo sanitize:**<br/>[![Express-mongo-sanitize](https://img.shields.io/npm/v/express-mongo-sanitize.svg?logo=express-mongo-sanitize)](https://www.npmjs.com/package/express-mongo-sanitize)
-<br/>
 **Cookie parser:** <br/>[![Cookie parser](https://img.shields.io/npm/v/cookie-parser.svg?logo=cookie-parser)](https://www.npmjs.com/package/cookie-parser)
-<br/>
 **Compression:** <br/>[![Compression](https://img.shields.io/npm/v/compression.svg?logo=compression)](https://www.npmjs.com/package/compression)
-<br/>
 **Express file upload:** <br/>[![Express-fileupload](https://img.shields.io/npm/v/express-fileupload.svg?logo=express-fileupload)](https://www.npmjs.com/package/express-fileupload)
-<br/>
 **Cors:** <br/>[![Cors](https://img.shields.io/npm/v/cors.svg?logo=cors)](https://www.npmjs.com/package/cors)
 
 - [@bwogi](https://www.github.com/bwogi)
@@ -120,6 +151,6 @@ Let's build a basic express application to start with.
 
 ## Packages we will use
 
-**Express:** <br/>[![Nodemon](https://img.shields.io/npm/v/express.svg?logo=express)](https://www.npmjs.com/package/express)
-<br/>
+**Express:** <br/>[![express](https://img.shields.io/npm/v/express.svg?logo=express)](https://www.npmjs.com/package/express)
+
 **Nodemon:** <br/>[![Nodemon](https://img.shields.io/npm/v/nodemon.svg?logo=nodemon)](https://www.npmjs.com/package/nodemon)
